@@ -1,0 +1,25 @@
+<div>
+    <table class="table table-hover">
+        <tr>
+            <td width="70px"><a href="{{url_for('userid', id = post.author.id)}}"><img src="{{post.author.avatar(70)}}" /></a></td>
+            <td>
+                {% autoescape false %}
+                    <p>{{ '%(nickname)s - %(when)s:' % {'nickname': '<a href="%s">%s</a>' % (url_for('userid', id = post.author.id), post.author.nickname), 'when': post.timestamp.ctime()} }}</p>
+                {% endautoescape %}
+                <p><strong><span id="post{{post.id}}"><pre>{{post.body}}</pre></span></strong></p>
+
+                {% for youtube_link in post.youtube_links %}
+                    <iframe class="youtube-player" type="text/html" width="640" height="385" src="http://www.youtube.com/embed/{{ youtube_link }}" frameborder="0"></iframe><br>
+                {% endfor %}
+                <div style="margin-top:10px">
+                    {% if not hide_delete %}
+                        {% if post.author.id == g.user.id %}
+                            <button class="delete_button" id="{{ post.id }}">Delete</button>
+                        {% endif %}
+                    {% endif %}
+                    <button class="like_button" id="{{ post.id }}">Like {{ post.likes_count() }}</button>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>

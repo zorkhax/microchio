@@ -1,0 +1,23 @@
+<!-- extend base layout -->
+{% extends "base.html" %}
+
+{% block extrahead %}
+    
+{% endblock %}
+{% block content %}
+<form name="postform" id="postform" method='post' action='#'>
+    {{form.hidden_tag()}}
+    {{ form.post(rows="10")|safe }}
+    {% for error in form.errors.post %}
+        <span style="color: red;">[{{error}}]</span><br>
+    {% endfor %}
+
+    <input type="submit" value="Post" id="submit_button">
+</form>
+<div id="log"></div>
+<div id="post_list">
+{% for post in posts%}
+    {% include 'post.html' %}
+{% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,44 @@
+#header {
+    background: #417690;
+    color: #ffc;
+    overflow: hidden;
+    width: 100%;
+}
+
+#branding h1 {
+    padding: 0 10px;
+    font-size: 18px;
+    margin: 8px 0;
+    font-weight: normal;
+    color: #f4f379;
+}
+
+#user-tools {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1.2em 10px;
+    font-size: 11px;
+    text-align: right;
+}
+
+#header a:link, #header a:visited {
+    color: white;
+}
+
+form textarea#post {
+    width: 100%;
+    height: 150px;
+}
+
+form #submit_button {
+    float: right;
+}
+
+#postform {
+    padding: 10px;
+}
+
+#login_form {
+    padding: 10px;
+}
