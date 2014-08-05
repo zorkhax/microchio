@@ -74,3 +74,5 @@
   * ./run.py
 
 Приложение будет доступно из браузера, на http://localhost:5000/
+
+Microchio основан на первой половине The Flask Mega-Tutorial от Miguel Grinberg: http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world
