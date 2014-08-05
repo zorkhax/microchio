@@ -1,4 +1,4 @@
-Тестовое задание:
+# Тестовое задание:
 
 ===============================================================
 
@@ -33,38 +33,32 @@
 ===============================================================
 
 
-Инструкция по развёртыванию.
+#Инструкция по развёртыванию.
 
 Рекомендации буду давать относительно системы Ubuntu 13.10.
 
 
-1. Для начала необходимо установить Python версии 2.6.5 или выше:
+##Для начала необходимо установить Python версии 2.6.5 или выше:
+  sudo apt-get install python2.7
 
-sudo apt-get install python2.7
+##Установить pip:
+  sudo apt-get install python-pip
 
-2. Установить pip:
+##Создать и активировать окружение:
+  Удобно использовать virtualenvwrapper
 
-sudo apt-get install python-pip
+  pip install virtualenvwrapper
+  mkvirtualenv microchio
+  workon microchio
 
-3. Создать и активировать окружение:
+##Установить необходимые библиотеки:
+  pip install -r requirements.txt
 
-Удобно использовать virtualenvwrapper
+##Создать и обновить базу данных:
+  db_create.py
+  db_upgrade.py
 
-pip install virtualenvwrapper
-mkvirtualenv microchio
-workon microchio
+##Запустить сервер:
+  ./run.py
 
-4. Установить необходимые библиотеки:
-
-pip install -r requirements.txt
-
-5. Создать и обновить базу данных:
-
-db_create.py
-db_upgrade.py
-
-6. Запустить сервер:
-
-./run.py
-
-Приложение будет доступно из браузера, на http://localhost:5000/
+  Приложение будет доступно из браузера, на http://localhost:5000/
