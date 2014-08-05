@@ -11,14 +11,12 @@
                 {% for youtube_link in post.youtube_links %}
                     <iframe class="youtube-player" type="text/html" width="640" height="385" src="http://www.youtube.com/embed/{{ youtube_link }}" frameborder="0"></iframe><br>
                 {% endfor %}
-                <div style="margin-top:10px">
-                    {% if not hide_delete %}
-                        {% if post.author.id == g.user.id %}
-                            <button class="delete_button" id="{{ post.id }}">Delete</button>
-                        {% endif %}
+                {% if not hide_delete %}
+                    {% if post.author.id == g.user.id %}
+                        <button class="delete_button" id="{{ post.id }}">Delete</button>
                     {% endif %}
-                    <button class="like_button" id="{{ post.id }}">Like {{ post.likes_count() }}</button>
-                </div>
+                {% endif %}
+                <button class="like_button" id="{{ post.id }}">Like {{ post.likes_count() }}</button>
             </td>
         </tr>
     </table>
