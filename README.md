@@ -51,11 +51,11 @@
 Рекомендации буду давать относительно системы Ubuntu 13.10.
 
 
-1. Для начала необходимо установить Python версии 2.6.5 или выше
-  * sudo apt-get install python2.7
+1. Для начала необходимо установить Python версии 2.6.5 или выше и python-dev
+  * sudo apt-get install -y python2.7 python-dev
 
 2. Установить pip
-  * sudo apt-get install python-pip
+  * sudo apt-get install -y python-pip
 
 3. Создать и активировать окружение
   * Удобно использовать virtualenvwrapper
