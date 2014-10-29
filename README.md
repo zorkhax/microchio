@@ -70,8 +70,8 @@
   * pip install -r requirements.txt
 
 5. Создать и обновить базу данных
-  * db_create.py
-  * db_upgrade.py
+  * ./db_create.py
+  * ./db_upgrade.py
 
 6. Запустить сервер
   * ./run.py
