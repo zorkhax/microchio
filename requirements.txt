@@ -13,7 +13,7 @@ MarkupSafe==0.18
 SQLAlchemy==0.9.7
 Tempita==0.5.2
 WTForms==2.0.1
-Werkzeug==0.9.4
+Werkzeug==0.15.3
 Whoosh==2.6.0
 argparse==1.2.1
 blinker==1.3
